@@ -1,7 +1,8 @@
 FROM gitpod/workspace-full
-
-USER root
-
+RUN apt-get update \
+        && apt-get install -y as31 \
+                               nasm \
+        && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
 # Install custom tools, runtime, etc. using apt-get
 # For example, the command below would install "bastet" - a command line tetris clone:
 #
