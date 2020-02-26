@@ -1,6 +1,6 @@
-.global _start
+        .global _start
 
-.text
+        .text
 _start:
         # write(1, message, 13)
         mov     $1, %rax                # system call 1 is write
